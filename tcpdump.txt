@@ -1,0 +1,65 @@
+Tcpdump es una herramienta poderosa para capturar y analizar el tráfico de red. A continuación, se muestran algunos de los comandos más comunes de Tcpdump, incluyendo opciones para mostrar la fecha y la zona horaria:
+
+Capturar todo el tráfico en una interfaz:
+
+bash
+Copy code
+sudo tcpdump -i <interfaz>
+Reemplaza <interfaz> con el nombre de la interfaz de red que deseas monitorear (por ejemplo, eth0).
+
+Mostrar datos hexadecimales y ASCII:
+
+bash
+Copy code
+sudo tcpdump -X -i <interfaz>
+Filtrar por dirección IP de origen o destino:
+
+bash
+Copy code
+sudo tcpdump -i <interfaz> host <ip>
+Reemplaza <ip> con la dirección IP específica.
+
+Filtrar por puerto de origen o destino:
+
+bash
+Copy code
+sudo tcpdump -i <interfaz> port <puerto>
+Reemplaza <puerto> con el número de puerto específico.
+
+Filtrar por tipo de protocolo (por ejemplo, TCP o UDP):
+
+bash
+Copy code
+sudo tcpdump -i <interfaz> tcp
+Mostrar solo los primeros N paquetes:
+
+bash
+Copy code
+sudo tcpdump -c <cantidad> -i <interfaz>
+Reemplaza <cantidad> con el número de paquetes que deseas mostrar.
+
+Guardar la salida en un archivo:
+
+bash
+Copy code
+sudo tcpdump -w <archivo.pcap> -i <interfaz>
+Reemplaza <archivo.pcap> con el nombre del archivo de salida en formato pcap.
+
+Leer un archivo pcap existente:
+
+bash
+Copy code
+sudo tcpdump -r <archivo.pcap>
+Reemplaza <archivo.pcap> con el nombre del archivo pcap que deseas leer.
+
+Mostrar la fecha y la hora en la salida:
+
+bash
+Copy code
+sudo tcpdump -tttt -i <interfaz>
+Mostrar la fecha y la hora en formato local:
+
+bash
+Copy code
+sudo tcpdump -tttt -i <interfaz> -l
+Estos comandos básicos te permitirán realizar diversas tareas de análisis de tráfico de red con Tcpdump. Ten en cuenta que algunos de estos comandos pueden requerir privilegios de superusuario (sudo) para acceder a la interfaz de red. Además, asegúrate de ajustar las opciones según tus necesidades específicas.
